@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NewsFeed</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+
+        <header class="fixTop">
+            <div class="newsfeed-header">
+                <center>
+                    <h1 class="heading">NewsFeed</h1>
+                </center>
+            </div>
+
+            <form id="movie-form" style="opacity: 0.85;">
+
+                <input
+                       type="text"
+                       class="input-group-field"
+                       name="movieName"
+                       placeholder="What's in your mind?"
+                       autofocus
+                       required
+                       >
+
+                <div class="input-group">
+                        <select class="input-group-field" name="year" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="Movies">Movies</option>
+                            <option value="Dinosaurs">Dinosaurs</option>
+                        </select>
+
+                        <div class="input-group-button">
+                            <button 
+                                    class="button"
+                                    type="submit"
+                                    >
+                                Post
+                            </button>
+                        </div>
+                        </div>
+                    </form>
+                </header>
+
+            <div class="medium-8 medium-offset-2 column" id="feed">
+                <div class="row">
+
+                    <div class="small-12 column">
+
+                        <ul class="no-bullet" id="movie-list">                    
+                            <li class="movie template">
+                                <strong><span class="movie-year"></span></strong><br>
+                                <span class="movie-name"></span>
+
+                                <hr>
+                                <span class="actions">
+                                    <button class="fav button fa fa-hand-o-right"></button>
+                                    <button class="edit button warning fa fa-pencil-square-o"></button>
+                                    <button class="up button warning fa fa-arrow-up"></button>
+                                    <button class="down button warning fa fa-arrow-down"></button>
+                                    <button class="remove button alert fa fa-trash-o"> </button>
+                                </span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="no-bullet" id="dino-list">                    
+                            <li class="dino template">
+                                <strong><span class="dino-year"></span></strong><br>
+                                <span class="dino-name"></span>
+
+                                <hr>
+                                <span class="actions">
+                                    <button class="fav button fa fa-hand-o-right"></button>
+                                    <button class="edit button warning fa fa-pencil-square-o"></button>
+                                    <button class="up button warning fa fa-arrow-up"></button>
+                                    <button class="down button warning fa fa-arrow-down"></button>
+                                    <button class="remove button alert fa fa-trash-o"> </button>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="jquery-3.2.1.min.js"></script>
+            <script src="app.js"></script>
+            </body>
+        </html>
