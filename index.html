@@ -16,82 +16,70 @@
         <header class="fixTop">
             <div class="newsfeed-header">
                 <center>
-                    <h1 class="heading">NewsFeed</h1>
+                    <img src="dino.png"><h1 class="heading">NewsFeed</h1>
                 </center>
             </div>
 
-            <form id="movie-form" style="opacity: 0.85;">
+            <form id="feed-form">
 
                 <input
                        type="text"
                        class="input-group-field"
-                       name="movieName"
+                       name="feedName"
                        placeholder="What's in your mind?"
                        autofocus
                        required
                        >
 
                 <div class="input-group">
-                        <select class="input-group-field" name="year" required>
-                            <option value="" disabled selected>Select category</option>
-                            <option value="Movies">Movies</option>
-                            <option value="Dinosaurs">Dinosaurs</option>
-                        </select>
+                    <select class="input-group-field" name="category" required>
+                        <option value="" disabled selected>Select category</option>
+                        <option value="Movies">Movies</option>
+                        <option value="Dinosaurs">Dinosaurs</option>
+                    </select>
 
-                        <div class="input-group-button">
-                            <button 
-                                    class="button"
-                                    type="submit"
-                                    >
-                                Post
-                            </button>
-                        </div>
-                        </div>
-                    </form>
-                </header>
-
-            <div class="medium-8 medium-offset-2 column" id="feed">
-                <div class="row">
-
-                    <div class="small-12 column">
-
-                        <ul class="no-bullet" id="movie-list">                    
-                            <li class="movie template">
-                                <strong><span class="movie-year"></span></strong><br>
-                                <span class="movie-name"></span>
-
-                                <hr>
-                                <span class="actions">
-                                    <button class="fav button fa fa-hand-o-right"></button>
-                                    <button class="edit button warning fa fa-pencil-square-o"></button>
-                                    <button class="up button warning fa fa-arrow-up"></button>
-                                    <button class="down button warning fa fa-arrow-down"></button>
-                                    <button class="remove button alert fa fa-trash-o"> </button>
-                                </span>
-                            </li>
-                        </ul>
-                        
-                        <ul class="no-bullet" id="dino-list">                    
-                            <li class="dino template">
-                                <strong><span class="dino-year"></span></strong><br>
-                                <span class="dino-name"></span>
-
-                                <hr>
-                                <span class="actions">
-                                    <button class="fav button fa fa-hand-o-right"></button>
-                                    <button class="edit button warning fa fa-pencil-square-o"></button>
-                                    <button class="up button warning fa fa-arrow-up"></button>
-                                    <button class="down button warning fa fa-arrow-down"></button>
-                                    <button class="remove button alert fa fa-trash-o"> </button>
-                                </span>
-                            </li>
-                        </ul>
+                    <div class="input-group-button">
+                        <button 
+                                class="button"
+                                type="submit"
+                                >
+                            Post
+                        </button>
                     </div>
                 </div>
+            </form>
+        </header>
+
+        <div class="medium-8 medium-offset-2 column" id="feed">
+            <div class="row">
+
+                <div class="small-12 column">
+                    <div class="category">Category Movies</div>
+                    <ul class="no-bullet" id="movie-list">                    
+                        <li class="feed template">
+                            <strong><span class="feed-category"></span></strong><br>
+                            <span class="feed-name"></span>
+
+                            <hr>
+                            <span class="actions">
+                                <button class="fav button fa fa-hand-o-right"></button>
+                                <button class="edit button warning fa fa-pencil-square-o"></button>
+                                <button class="up button warning fa fa-arrow-up"></button>
+                                <button class="down button warning fa fa-arrow-down"></button>
+                                <button class="remove button alert fa fa-trash-o"> </button>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                    <div class="category">Category Dinosaurs</div>
+                    <ul class="no-bullet" id="dino-list">                    
+                    </ul>
+                </div>
             </div>
+        </div>
 
 
-            <script src="jquery-3.2.1.min.js"></script>
-            <script src="app.js"></script>
-            </body>
-        </html>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

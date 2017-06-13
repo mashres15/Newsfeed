@@ -5,7 +5,7 @@ ul{
 .fixTop{
     position: fixed;
     width: 100%;
-    height: 200px;
+    height: 310px;
 }
 
 .newsfeed-header{
@@ -16,10 +16,10 @@ ul{
 }
 
 #feed{
-    margin-top:200px;
+    margin-top:310px;
 }
 
-#movie-form{
+#feed-form{
     position: fixed;
     margin-right:10%;
     margin-left:10%;
@@ -48,12 +48,16 @@ ul > li{
     
 }
 
-.movie-name{
+.category{
+    background: #fe921f; color: #ffffff; display: inline-block; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: bold; line-height: 12px; letter-spacing: 1px; margin: 0 0 30px; padding: 10px 15px 8px; text-transform: uppercase; 
+}
+
+.feed-name{
     text-align:left;
     line-height: 50px;
 }
 
-.movie-year{
+.feed-year{
     float:right;
     line-height: 50px;
 }
