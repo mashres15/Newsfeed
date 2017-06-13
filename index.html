@@ -16,7 +16,7 @@
         <header class="fixTop">
             <div class="newsfeed-header">
                 <center>
-                    <img src="dino.png"><h1 class="heading">NewsFeed</h1>
+                    <img src="dino.png" id="logo"><h1 class="heading">NewsFeed</h1>
                 </center>
             </div>
 
@@ -52,7 +52,8 @@
 
         <div class="medium-8 medium-offset-2 column" id="feed">
             <div class="row">
-
+                <input type="text" id="searchField" onkeyup="myFunction()" placeholder="Search for names..">
+                
                 <div class="small-12 column">
                     <div class="category">Category Movies</div>
                     <ul class="no-bullet" id="movie-list">                    

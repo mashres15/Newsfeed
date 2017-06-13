@@ -45,7 +45,7 @@ ul > li{
 .heading{
     font-family: 'Vollkorn', serif;
     color: white;
-    
+
 }
 
 .category{
@@ -65,9 +65,7 @@ ul > li{
 .space{
     margin-right: 20px;
 }
-.logo{
-    height:100px;
-}
+
 
 .promote{
     background-color: #FA6121;
@@ -78,6 +76,11 @@ ul > li{
     border: solid white thin;
     color: white;
 }
+
+#logo:hover{
+    content:url(dino2.png);
+}
+
 
 .template {
     display: none;
@@ -90,4 +93,15 @@ body {
     background-position: top center;
     background-size: cover;
     position: relative;
+}
+
+#searchField {
+    background-image: url('search.png');
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
 }

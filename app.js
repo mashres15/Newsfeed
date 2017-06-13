@@ -149,14 +149,15 @@ const app = {
             editbutton.classList.remove('fa-check')
             editbutton.classList.add('warning')
             editbutton.classList.remove('success')
-
+            
             if(feed.category === 'Movies'){
-                const arr = this.movies
+                arr = this.movies
                 }
             else{
-                const arr = this.dinos
+                arr = this.dinos
                 }
-            // Find the movie in the array, and remove it
+            
+            // Find the feed in the array, and remove it
             for (let i = 0; i < arr.length; i++) {
                 const currentId = arr[i].id.toString()
                 if (listItem.dataset.id === currentId) {
@@ -164,8 +165,9 @@ const app = {
                     break
                 }
             } 
-
+            
             this.save()
+            
         }
         else{
             //console.log("false")
@@ -191,11 +193,11 @@ const app = {
         const listItem = ev.target.closest('.feed')
 
         if(feed.category === 'Movies'){
-            const arr = this.movies
+            arr = this.movies
             }
 
         else{
-            const arr = this.dinos
+            arr = this.dinos
             }
         // Find the feed in the array, and remove it
         for (let i = 0; i < arr.length; i++) {
@@ -213,11 +215,11 @@ const app = {
     moveUp(feed, ev) {
         const li = ev.target.closest('.feed')
         if(feed.category === 'Movies'){
-            const arr = this.movies
+            arr = this.movies
             list = this.movieList
         }
         else{
-            const arr = this.dinos 
+            arr = this.dinos 
             list = this.dinoList
         }
 
@@ -241,11 +243,11 @@ const app = {
     moveDown(feed, ev) {
         const li = ev.target.closest('.feed')
         if(feed.category === 'Movies'){
-            const arr = this.movies
+            arr = this.movies
             list = this.movieList
         }
         else{
-            const arr = this.dinos 
+            arr = this.dinos 
             list = this.dinoList
         }
 
@@ -271,5 +273,37 @@ app.init({
     dinoListSelector: '#dino-list',
     templateSelector: '.feed.template',
 })
+
+
+function myFunction() {
+    // Declare variables
+    let input, filter, ul, li, a, i
+    input = document.getElementById('searchField')
+    filter = input.value.toUpperCase()
+    ul = document.getElementById("movie-list")
+    li = ul.getElementsByTagName('li')
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName('span')[1]
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""
+        } else {
+            li[i].style.display = "none"
+        }
+    }
+    ul = document.getElementById("dino-list")
+    li = ul.getElementsByTagName('li')
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName('span')[1]
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""
+        } else {
+            li[i].style.display = "none"
+        }
+    }
+}
 
 
